@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#02070a">
+  <meta name="description" content="二人の会話だけが、深海施設の封鎖手順をつなぐ。2人協力コミュニケーションゲーム ABYSS PROTOCOL。">
+  <meta property="og:title" content="ABYSS PROTOCOL — 深層封鎖手順">
+  <meta property="og:description" content="一人は制御面、一人は解析手順書。見えない情報を声で接続する2人協力深海サスペンス。">
+  <meta property="og:image" content="assets/abyss-key-art.png">
+  <meta property="og:type" content="website">
+  <title>ABYSS PROTOCOL — 深層封鎖手順</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <canvas class="particle-field" id="particleField" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="ABYSS PROTOCOL トップへ">
+      <span class="brand-mark">A13</span>
+      <span><b>ABYSS PROTOCOL</b><small>深層封鎖手順 / REV.20 SITE</small></span>
+    </a>
+    <nav aria-label="メインナビゲーション">
+      <a href="#story">物語</a>
+      <a href="#how">遊び方</a>
+      <a href="#chapters">記録</a>
+      <a href="ABYSS_PROTOCOL_MANUAL.pdf" target="_blank" rel="noopener">手順書</a>
+      <a class="nav-play" href="game.html">任務開始</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">MENU</button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#story">物語</a><a href="#how">遊び方</a><a href="#chapters">記録</a>
+    <a href="ABYSS_PROTOCOL_MANUAL.pdf" target="_blank" rel="noopener">PDF手順書</a>
+    <a class="nav-play" href="game.html">任務開始</a>
+  </div>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-image" role="img" aria-label="深海研究施設PELAGIC CORE A-13と二人の潜水作業員"></div>
+      <div class="hero-shade"></div>
+      <div class="sonar sonar-a" aria-hidden="true"></div>
+      <div class="sonar sonar-b" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">PELAGIC SAFETY BUREAU / UNAUTHORIZED SIGNAL</p>
+        <h1 id="heroTitle">ABYSS<br><span>PROTOCOL</span></h1>
+        <p class="hero-ja">深層封鎖手順</p>
+        <p class="hero-copy">深度8,021m。事故で切断されたはずの音声回線が、三年ぶりに二人をつないだ。<br>一人は施設の制御面を、一人は緊急手順書を持つ。互いに見えない情報を声で接続し、海底施設の異常を止めてください。</p>
+        <div class="hero-actions">
+          <button class="primary-button" id="watchIntro" type="button"><span>OPENING MOVIE</span>導入を見る</button>
+          <a class="secondary-button" href="game.html"><span>ENTER FACILITY</span>ゲームを開始</a>
+          <a class="text-button" href="ABYSS_PROTOCOL_MANUAL.pdf" target="_blank" rel="noopener">解析員用PDFを開く ↗</a>
+        </div>
+        <div class="hero-facts" aria-label="ゲーム情報">
+          <div><small>PLAYERS</small><b>2人専用</b></div>
+          <div><small>GENRE</small><b>協力・会話・推理</b></div>
+          <div><small>FORMAT</small><b>ブラウザ + PDF</b></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL FOR DOSSIER</div>
+    </section>
+
+    <section class="signal-strip" aria-label="受信ログ">
+      <span>RECOVERED TRANSMISSION 03:17:22</span>
+      <p>「……澪、聞こえるか。制御面が、俺たちの会話に反応している」</p>
+      <i></i>
+    </section>
+
+    <section class="story-section section" id="story" aria-labelledby="storyTitle">
+      <div class="section-heading">
+        <p>CLASSIFIED DOSSIER / 01</p>
+        <h2 id="storyTitle">なぜ、二人の声だけが<br>施設に届くのか。</h2>
+      </div>
+      <div class="story-layout">
+        <div class="story-lead">
+          <p>海洋観測施設〈PELAGIC CORE A-13〉は、三年前の事故によって放棄された。公式記録では全回線が停止し、施設は深海に沈黙したとされている。</p>
+          <p>しかし現在、施設から一名分の緊急通信が発信されている。現場へ降りた保全技師・<b>真舟 湊</b>の制御面と、地上の解析員・<b>伊波 澪</b>の端末だけが、封鎖システムへ接続された。</p>
+          <p class="story-warning">二人は三年前の事故当日、同じ施設にいた。</p>
+        </div>
+        <ol class="timeline">
+          <li><time>3年前</time><div><b>PELAGIC CORE事故</b><p>深層観測実験中に全電源と音声回線が消失。湊と澪の通信は途中で切断された。</p></div></li>
+          <li><time>現在 02:41</time><div><b>未承認信号を受信</b><p>停止したはずのA-13から、規則的な低周波と一名分の生命信号が届く。</p></div></li>
+          <li><time>03:17</time><div><b>二者間回線が再接続</b><p>施設は二人の会話を認識し、異常モジュールの封鎖画面を開いた。</p></div></li>
+          <li><time>残り時間</time><div><b>封鎖手順を完了せよ</b><p>装置の正解だけでは足りない。施設は、二人が答えへ至る過程そのものを記録している。</p></div></li>
+        </ol>
+      </div>
+      <div class="character-grid">
+        <article class="character-card"><span>FIELD OPERATOR</span><h3>真舟 湊</h3><p>深海施設の保全技師。ゲーム画面に表示される装置と共通情報を見られるが、解除規則を知らない。</p></article>
+        <article class="character-card"><span>ANALYSIS OPERATOR</span><h3>伊波 澪</h3><p>事故調査班の解析員。緊急手順書を持つが、湊の制御面を見ることはできない。</p></article>
+        <article class="character-card anomaly"><span>UNKNOWN OBSERVER</span><h3>観測核</h3><p>施設最深部に残る未分類システム。二人の発話間隔と合意形成を、何らかの目的で測定している。</p></article>
+      </div>
+    </section>
+
+    <section class="how-section section" id="how" aria-labelledby="howTitle">
+      <div class="section-heading compact">
+        <p>OPERATION PROTOCOL / 02</p>
+        <h2 id="howTitle">画面を見せ合わない。<br>声だけで解除する。</h2>
+      </div>
+      <div class="role-diagram">
+        <article class="role-card operator"><span class="role-index">01</span><small>GAME SCREEN</small><h3>現場操作者</h3><p>装置を選び、色・数字・記号・共通情報を読み上げる。</p><ul><li>ゲーム画面を見る</li><li>解析員の指示を復唱</li><li>ボタンや配線を操作</li></ul></article>
+        <div class="voice-link" aria-label="音声で情報を往復する"><i></i><b>VOICE<br>ONLY</b><i></i></div>
+        <article class="role-card analyst"><span class="role-index">02</span><small>PDF MANUAL</small><h3>解析員</h3><p>PDFの条件表を使い、必要な質問だけをして答えを返す。</p><ul><li>ゲーム画面を見ない</li><li>条件を上から確認</li><li>短い一文で指示</li></ul></article>
+      </div>
+      <div class="conversation-example">
+        <span>COMMUNICATION SAMPLE</span>
+        <p><b>操作者：</b>「記号鍵盤。左から、月・細波・稲妻・T字」</p>
+        <p><b>解析員：</b>「列3です。月、細波、稲妻、T字の順」</p>
+        <p><b>操作者：</b>「その順で押します」</p>
+      </div>
+    </section>
+
+    <section class="chapters-section section" id="chapters" aria-labelledby="chaptersTitle">
+      <div class="section-heading">
+        <p>RECOVERED ARCHIVE / 03</p>
+        <h2 id="chaptersTitle">五つの区画。<br>一つずつ明らかになる事故。</h2>
+      </div>
+      <div class="chapter-grid">
+        <article><em>CHAPTER 01</em><h3>圧力制御区画</h3><p>二人の回線が再接続される。基本手順を学びながら、下層への隔壁を開く。</p><span>PRESSURE DECK</span></article>
+        <article><em>CHAPTER 02</em><h3>居住区画</h3><p>短時間だけ維持される救助信号。施設の安定か、残された生命反応か。</p><span>RESCUE TRACE</span></article>
+        <article><em>CHAPTER 03</em><h3>生体音響観測区画</h3><p>深海から届く音は、正解ではなく二人の会話に反応し始める。</p><span>THE CHOIR</span></article>
+        <article><em>CHAPTER 04</em><h3>存在しない第13区画</h3><p>図面にない区画と8秒間だけ読める識別情報。事故記録の偽装が露出する。</p><span>BLACK FILE</span></article>
+        <article><em>CHAPTER 05</em><h3>聴覚室</h3><p>最後に求められるのは、解除コードではなく理由まで一致した二人の答え。</p><span>CONSENSUS</span></article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p>COMMUNICATION IS LIFE / SILENCE IS THE ABYSS</p>
+        <h2>二人で話し続けてください。</h2>
+        <span>片方がゲーム画面を開き、もう片方がPDF手順書を開けば開始できます。</span>
+      </div>
+      <div class="cta-actions">
+        <a class="primary-button" href="game.html"><span>ENTER FACILITY</span>任務を開始する</a>
+        <a class="secondary-button" href="ABYSS_PROTOCOL_MANUAL.pdf" target="_blank" rel="noopener"><span>OPEN MANUAL</span>PDF手順書</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>ABYSS PROTOCOL / PELAGIC SAFETY BUREAU</span><a href="#top">BACK TO SURFACE ↑</a></footer>
+
+  <section class="cinematic" id="cinematic" aria-label="ABYSS PROTOCOL オープニングムービー" aria-hidden="true">
+    <div class="cinematic-bg"></div>
+    <canvas id="cinematicCanvas" aria-hidden="true"></canvas>
+    <div class="cinematic-vignette"></div>
+    <div class="movie-top"><span>PELAGIC ARCHIVE / PLAYBACK</span><button id="closeMovie" type="button">SKIP ×</button></div>
+    <div class="movie-scenes" id="movieScenes" aria-live="polite">
+      <article class="movie-scene" data-start="0" data-end="5"><p>西暦2052年</p><h2>北太平洋<br>深度8,021m</h2><small>PELAGIC CORE A-13</small></article>
+      <article class="movie-scene" data-start="5" data-end="11"><p>三年前</p><h2>観測実験中の事故により<br>施設の全回線が消失。</h2><small>公式記録：生存者なし / 施設放棄</small></article>
+      <article class="movie-scene transcript" data-start="11" data-end="18"><p>RECOVERED VOICE / 00:00:12</p><blockquote>「湊、返事をして。隔壁が——」</blockquote><i></i><blockquote>「澪、聞こえない。回線が——」</blockquote></article>
+      <article class="movie-scene" data-start="18" data-end="25"><p>現在 02:41</p><h2>停止した施設から<br>未承認の生命信号を受信。</h2><small>同時に、二名分の音声識別子が再起動</small></article>
+      <article class="movie-scene transcript" data-start="25" data-end="33"><p>LIVE TRANSMISSION / 03:17:22</p><blockquote>湊「……澪、聞こえるか」</blockquote><i></i><blockquote>澪「三年ぶりね。画面に何が見える？」</blockquote></article>
+      <article class="movie-scene mission" data-start="33" data-end="42"><p>EMERGENCY DIRECTIVE</p><h2>互いに見えない情報を<br>声で接続せよ。</h2><small>全異常モジュールを封鎖し、観測核へ到達する</small></article>
+      <article class="movie-scene final" data-start="42" data-end="52"><p>MISSION READY</p><h2>ABYSS<br><span>PROTOCOL</span></h2><div><a href="game.html">任務を開始</a><button id="replayMovie" type="button">もう一度見る</button></div></article>
+    </div>
+    <div class="movie-controls">
+      <button id="moviePause" type="button">PAUSE</button>
+      <button id="movieSound" type="button" aria-pressed="false">SOUND OFF</button>
+      <div class="movie-progress"><i id="movieProgress"></i></div>
+      <time id="movieTime">00:00 / 00:52</time>
+    </div>
+  </section>
+
+  <section class="entry-gate" id="entryGate" aria-label="オープニング選択">
+    <div class="gate-panel">
+      <span>INCOMING TRANSMISSION / A-13</span>
+      <h2>ゲームを始める前に、<br>二人がここへ来た理由を確認します。</h2>
+      <p>約52秒の導入シークエンスです。音響はボタン操作後に開始できます。ヘッドフォン推奨。</p>
+      <div><button id="gateWatch" class="primary-button" type="button"><span>PLAY TRANSMISSION</span>導入を見る</button><button id="gateSkip" class="secondary-button" type="button"><span>SKIP INTRO</span>サイトを見る</button></div>
+      <label><input id="hideGateNext" type="checkbox"> 次回からこの確認を表示しない</label>
+    </div>
+  </section>
+
+  <script src="assets/intro.js"></script>
+</body>
+</html>
