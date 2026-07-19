@@ -1,17 +1,8 @@
-ABYSS PROTOCOL REV.21 単一ファイル公開版
-
-この版では、トップページのCSS・JavaScript・サムネイル画像をindex.htmlへ埋め込んでいます。assetsフォルダは不要です。
-
-アップロードするもの：
-- index.html
-- game.html
-- ABYSS_PROTOCOL_MANUAL.pdf
-- 404.html
-- .nojekyll
-
-GitHub Pages設定：
-Settings → Pages → Build and deployment
-Source: Deploy from a branch
-Branch: main
-Folder: /(root)
-Save
+1. GitHubの abyss-protocol リポジトリを開く
+2. Add file → Upload files
+3. このフォルダ内のファイルをすべて上書きアップロード
+4. Commit directly to the main branch
+5. Settings → Pages
+6. Source: Deploy from a branch
+7. Branch: main / Folder: /(root) → Save
+8. 数分後に公開URLへ ?v=22 を付けて確認
