@@ -25,16 +25,11 @@
 .split-terminal .terminal{min-width:0;padding:28px;justify-content:center;text-align:center;align-items:center}
 .split-terminal .terminal:before{inset:18px}
 .split-terminal .terminal small{display:block;position:relative;width:100%;min-height:18px;text-align:center;letter-spacing:.18em}
-.split-terminal .terminal b{display:block;width:100%;font-size:clamp(20px,2.35vw,39px);line-height:1.15;white-space:nowrap;letter-spacing:.01em;text-align:center}
+.split-terminal .terminal b{display:block;width:100%;font-size:clamp(22px,2.7vw,46px);line-height:1.15;white-space:nowrap;letter-spacing:.01em;text-align:center}
 .split-terminal .terminal span{display:block;width:min(520px,92%);margin-top:16px;font-size:clamp(12px,.95vw,15px);line-height:1.8;text-align:center}
 .movie-hud{z-index:1}.scene-copy,.split-terminal,.voice-record,.time-void,.subtitle,.movie-controls{z-index:3}
 .scene-copy h2,.scene-copy p,.subtitle{text-wrap:pretty}
-@media(max-width:1180px){.split-terminal{gap:16px;inset:13vh 4vw 19vh}.split-terminal .terminal{padding:20px}.split-terminal .terminal b{font-size:clamp(18px,2.2vw,29px)}.split-terminal .terminal span{font-size:12px}}
-
-.scene-copy{max-width:760px}
-.scene h2{max-width:none}
-.scene h2>span{display:block;white-space:nowrap}
-@media(max-width:1180px){.scene-copy{max-width:700px}.scene h2{font-size:clamp(36px,4.2vw,52px)}}
+@media(max-width:1180px){.split-terminal{gap:16px;inset:13vh 4vw 19vh}.split-terminal .terminal{padding:20px}.split-terminal .terminal b{font-size:clamp(20px,2.45vw,31px)}.split-terminal .terminal span{font-size:12px}}
 </style>
 </head>
 <body>
@@ -54,8 +49,8 @@
 <div class="scene" data-duration="7500" data-sfx="signal"><div class="scene-photo signal"></div><div class="scene-overlay"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">UNAUTHORIZED SIGNAL / AUTHENTICATION RETRY</div><h2>生存者が、<br>事故現場へ戻った。</h2><p>再潜航艇から送信された職員番号0317。事故を生き延びた技師が、封鎖された施設へ戻ってきた。</p></div><div class="voice-record"><small>VOICEPRINT MATCH</small><b>真舟 湊 / EMPLOYEE 0317</b><div class="wave"></div><small class="record-ok">IDENTITY CONFIDENCE 99.87%</small></div></div>
 <div class="scene" data-duration="7500" data-sfx="voices"><div class="scene-photo black"></div><div class="scene-overlay"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">VOICE CHANNEL RESTORED / TWO NODES</div><h2>「澪。聞こえるか」</h2><p>施設内部の湊と、海上支援船の伊波澪。事故以来途切れていた二人の回線だけが接続された。</p></div></div>
 <div class="scene" data-duration="8000" data-sfx="split"><div class="scene-photo black"></div><div class="scene-overlay"></div><div class="split-terminal"><div class="terminal"><small>CHANNEL 01 / FACILITY</small><b>見えている。だが、分からない。</b><span>操作者には装置が見える。しかし解除規則は隔離されている。</span></div><div class="terminal analyst"><small>CHANNEL 02 / SURFACE</small><b>分かっている。だが、見えない。</b><span>解析員には手順書がある。しかし装置の状態は見えない。</span></div></div></div>
-<div class="scene" data-duration="7000" data-sfx="observe"><div class="scene-photo signal"></div><div class="scene-overlay"></div><div class="scene-grid"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">OBSERVATION NUCLEUS / DUAL RESPONSE DETECTED</div><h2><span>施設は、二人の会話を</span><span>聞いている。</span></h2><p>深層合唱波は、一人の操作にもAIにも反応しない。異なる情報を持つ二人が、確認し、合意したときだけ応答する。</p></div></div>
-<div class="scene" data-duration="6500" data-sfx="mission"><div class="scene-photo red"></div><div class="scene-overlay"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">CONTAINMENT AUTHORIZED / PRESSURE FAILURE</div><h2><span>声を切らすな。</span><span>深層封鎖を開始する。</span></h2><p>圧力限界まで残された時間はわずか。片方だけでは、この施設を止められない。</p></div></div>
+<div class="scene" data-duration="7000" data-sfx="observe"><div class="scene-photo signal"></div><div class="scene-overlay"></div><div class="scene-grid"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">OBSERVATION NUCLEUS / DUAL RESPONSE DETECTED</div><h2>施設は、二人の会話を聞いている。</h2><p>深層合唱波は、一人の操作にもAIにも反応しない。異なる情報を持つ二人が、確認し、合意したときだけ応答する。</p></div></div>
+<div class="scene" data-duration="6500" data-sfx="mission"><div class="scene-photo red"></div><div class="scene-overlay"></div><div class="movie-hud"></div><div class="scene-copy"><div class="scene-code">CONTAINMENT AUTHORIZED / PRESSURE FAILURE</div><h2>声を切らすな。<br>深層封鎖を開始する。</h2><p>圧力限界まで残された時間はわずか。片方だけでは、この施設を止められない。</p></div></div>
 </div><div class="subtitle" id="subtitle"></div><div class="movie-controls"><div><div class="progress"><i id="movieBar"></i></div><div class="movie-meta"><span id="movieTime">00:00 / 00:56</span><span>PELAGIC SAFETY BUREAU / ARCHIVE PLAYBACK</span></div></div><div class="movie-buttons"><button id="movieMute" type="button">SOUND ON</button><button id="movieSkip" type="button">SKIP</button></div></div><div class="movie-pre" id="moviePre"><div class="pre-panel"><div class="seal">A13</div><h2>導入記録を再生します</h2><p>低周波、左右の通信音、警報を使用します。通話を始める前にイヤホンの音量を調整してください。</p><div class="pre-checklist"><div><b>PCプレイ前提</b><span>スマホ最適化ではなく、PCの横幅を前提に字幕サイズと折り返しを調整しています。</span></div><div><b>開始前の流れ</b><span>① 役割を決める ② 解析員マニュアルを開く ③ 音量調整 ④ 全画面化 ⑤ 導入映像を再生</span></div></div><div class="audio-controls"><input id="introVolume" type="range" min="0" max="100" value="45" aria-label="音量"><span id="introVolLabel">45%</span></div><div class="pre-actions"><button class="btn primary" id="movieSoundStart" type="button">音響を有効にして再生</button><button class="btn" id="movieSilentStart" type="button">無音で再生</button><button class="btn" id="movieClose" type="button">閉じる</button></div></div></div></div>
 <script>
 (()=>{
