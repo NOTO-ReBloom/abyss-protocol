@@ -1,0 +1,39 @@
+{
+  "game_start": {
+    "start_button_enabled": true,
+    "after_start": "introScreen",
+    "after_briefing": "gameScreen",
+    "javascript_errors": 0
+  },
+  "top_rectangle": {
+    "initial_event_banner_opacity": 0,
+    "initial_event_banner_visibility": "hidden",
+    "after_event_opacity": 0,
+    "after_event_visibility": "hidden"
+  },
+  "viewport_1366x768": {
+    "scrollWidth": 1366,
+    "clientWidth": 1366,
+    "scrollHeight": 768,
+    "clientHeight": 768
+  },
+  "movie_split_1600x900": {
+    "equal_panel_width": true,
+    "equal_panel_height": true,
+    "left_title_one_line": true,
+    "right_title_one_line": true,
+    "overflow_count": 0
+  },
+  "movie_split_1366x768": {
+    "equal_panel_width": true,
+    "equal_panel_height": true,
+    "left_title_one_line": true,
+    "right_title_one_line": true,
+    "overflow_count": 0
+  },
+  "javascript_syntax": {
+    "game.html": "ok",
+    "index.html": "ok",
+    "404.html": "ok"
+  }
+}
