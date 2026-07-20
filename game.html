@@ -72,6 +72,21 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;bac
 @media(max-height:760px){.game-shell>.operator-role-strip{height:22px;flex-basis:22px}.module-action{display:none}.preview{height:43%}.game-id strong{font-size:10px}.game-id span{font-size:8px}.game-id em{font-size:7px}}
 
 @media(max-height:760px){.module-panel{max-height:calc(100vh - 62px);padding:14px}.modal-top{top:-14px;padding:9px 14px;margin:-3px -3px 10px}.modal-top h2{font-size:22px}.module-body{padding:2px 12px 6px}.instruction{padding:9px 13px;margin-bottom:10px;line-height:1.45}.maze-guide{margin:-3px 0 8px}.maze-wrap{grid-template-columns:minmax(0,420px) 220px;gap:18px}.maze-controls{grid-template-columns:repeat(3,54px);grid-template-rows:repeat(2,54px);gap:6px;margin:5px 0 12px}.coord-box{padding:9px}.coordinate-line{padding:6px 0}.wave-screen{height:130px;padding:10px}.freq-code{margin:8px;line-height:1.45}.freq-code strong{font-size:30px}.digit-grid{gap:16px;max-width:620px}.digit-val{height:86px;font-size:42px}.digit-dial small{margin-top:7px}.submit-btn{padding:9px 20px}}
+
+/* REV24 fit-and-rust refinements */
+html,body{overflow:hidden}body{background:radial-gradient(circle at 15% 0,rgba(100,64,45,.09),transparent 16%),radial-gradient(circle at 85% 100%,rgba(107,68,43,.08),transparent 19%),#020507}body:before{background:radial-gradient(circle at 50% -20%,rgba(45,137,153,.13),transparent 42%),radial-gradient(circle at 10% 10%,rgba(128,82,53,.08),transparent 16%),radial-gradient(circle at 90% 88%,rgba(117,71,44,.08),transparent 16%),linear-gradient(180deg,rgba(255,255,255,.012),transparent 22%)}
+.game-top,.console,.sidebox,.module-card,.module-panel,.options-panel,.briefing-card,.setup-panel{position:relative}
+.game-top:after,.console:after,.sidebox:after,.module-card:after,.module-panel:after{content:"";position:absolute;pointer-events:none;inset:0;opacity:.28;background:radial-gradient(circle at 8% 12%,rgba(138,88,55,.18),transparent 10%),radial-gradient(circle at 94% 86%,rgba(107,62,39,.16),transparent 12%),radial-gradient(circle at 25% 100%,rgba(97,57,35,.1),transparent 14%)}
+.game-top,.console,.sidebox,.module-card,.module-panel{box-shadow:0 18px 46px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.05),inset 0 -4px 0 rgba(0,0,0,.4)}
+.console-wrap{grid-template-columns:minmax(0,1fr) clamp(270px,18vw,330px)}
+.sidebar{grid-template-rows:64px minmax(120px,1.1fr) minmax(76px,.72fr) minmax(96px,.95fr) 52px 64px 52px;gap:7px}
+.sidebox{padding:10px 11px}.sidebox h4{margin-bottom:6px}.plain-label{font-size:10px}.plain-sub{font-size:5.5px}.progress-big b{font-size:28px}.progress-big span{font-size:11px}.directive-item{padding:7px 8px}.directive-item b{font-size:10px;line-height:1.38}.directive-item em{font-size:7px}.intel-fragment,.log,.chapter-status{font-size:8px;line-height:1.55}.strike{width:20px;height:20px;font-size:9px}.seed-box b{font-size:17px}.console-name b{font-size:26px;line-height:1.15}.console-name,.game-id b,.directive-item b,.chapter-status,.intel-fragment,.module-card,.module-card *{overflow-wrap:anywhere;word-break:keep-all}
+.observation-strip{grid-template-columns:minmax(0,1.48fr) minmax(340px,.74fr)}.instrument-rack b{font-size:28px}.instrument-rack small{font-size:8px}.instrument-rack span{font-size:9px}
+.edgework{gap:0}.edge-card,.edge-item{min-width:0}
+.module-card{padding:10px 11px 9px}.module-card .module-title,.module-card b{font-size:14px}.module-card small{font-size:8px}.module-grid{gap:9px}.module-preview,.wire-preview,.symbol-preview,.dial-preview,.memory-preview,.switch-preview,.maze-preview,.freq-preview,.sonar-preview,.flow-preview{transform:scale(.96);transform-origin:center center}
+.module-panel{width:min(940px,94vw);max-height:calc(100vh - 72px)}.modal-top h2{font-size:22px}.instruction{font-size:11px;line-height:1.58;padding:11px 13px}.instruction strong{font-size:13px}.module-body{padding:2px 10px 14px}
+@media (max-width:1500px){.game-shell{padding:8px 10px 10px;gap:7px}.game-top{height:62px;flex-basis:62px;padding:0 12px}.timer{font-size:28px}.top-actions{gap:5px}.manual-link,.comm-pill,.icon-btn{height:30px;font-size:9px}.icon-btn{width:30px}.console{padding:12px;grid-template-rows:88px 44px minmax(0,1fr) 96px}.console-wrap{grid-template-columns:minmax(0,1fr) 292px}.console-name b{font-size:22px}.game-id b{font-size:11px}.module-card{padding:8px 9px 8px}.module-grid{gap:8px}.sidebar{grid-template-rows:58px minmax(112px,1.1fr) minmax(70px,.72fr) minmax(88px,.9fr) 48px 60px 48px}.progress-big b{font-size:24px}.directive-item b{font-size:9px}.directive-item em,.intel-fragment,.log,.chapter-status{font-size:7.5px}}
+@media (max-height:830px){.operator-role-strip{height:28px;font-size:9px}.game-shell{padding:6px 8px 8px;gap:6px}.game-top{height:58px;flex-basis:58px}.timer{font-size:26px}.console{grid-template-rows:80px 40px minmax(0,1fr) 88px}.console-name b{font-size:21px}.observation-strip{grid-template-columns:minmax(0,1.38fr) minmax(300px,.72fr)}.instrument-rack b{font-size:24px}.edgework{font-size:10px}.sidebox{padding:8px 9px}.sidebox h4{margin-bottom:5px}.progress-big b{font-size:22px}.module-card .module-title,.module-card b{font-size:13px}.module-card small{font-size:7px}.module-panel{max-height:calc(100vh - 64px)}.modal-top h2{font-size:20px}.instruction{font-size:10.5px}}
 </style></head><body><canvas id="gameDepthCanvas" aria-hidden="true"></canvas><div class="site-return"><a href="index.html">← STORY SITE</a><a href="analyst.html" target="_blank" rel="noopener">ANALYST CONSOLE ↗</a><span class="headphone-pill">🎧 HEADPHONES RECOMMENDED</span></div>
 <div class="app" id="app">
   <section class="screen active" id="setupScreen">
@@ -104,7 +119,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;bac
         <div class="field"><label>ミッション番号（同じ番号で同じ問題を再現）</label><div class="seed-row"><input id="seedInput" class="text-input" maxlength="10" placeholder="例：73182406" inputmode="numeric" pattern="[0-9]*"><button id="randomSeedBtn" class="small-btn" type="button">生成</button></div></div>
         <div class="setup-actions"><button id="helpSetup" class="ghost-btn" type="button">遊び方</button><button id="optionsOpenSetup" class="ghost-btn" type="button">音響・表示設定</button><button id="fullscreenSetup" class="ghost-btn" type="button">全画面</button></div>
         <button id="startBtn" class="main-btn" type="button">遊び方を確認して任務開始</button>
-        <a class="manual-link" href="analyst.html" target="_blank"><span>解析員コンソール / REV.23</span><span>開く ↗</span></a>
+        <a class="manual-link" href="analyst.html" target="_blank"><span>解析員手順書 / IMAGE MANUAL</span><span>開く ↗</span></a>
       </div></aside>
     </div>
   </section>
@@ -128,7 +143,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;bac
         </div>
         <div class="briefing-actions">
           <button class="ghost-btn" id="briefingBack">戻る</button>
-          <a class="manual-link intro-manual" href="analyst.html" target="_blank"><span>解析員コンソール / REV.23</span><span>開く ↗</span></a>
+          <a class="manual-link intro-manual" href="analyst.html" target="_blank"><span>解析員手順書 / IMAGE MANUAL</span><span>開く ↗</span></a>
           <button class="main-btn briefing-start" id="briefingStart">潜航開始</button>
         </div>
       </div>
@@ -141,7 +156,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;bac
       <header class="game-top">
         <div class="game-id"><strong id="chapterTop">PELAGIC CORE / A-13</strong><span id="missionCodeTop">MISSION ----</span><em>DEPTH 8,021m / EXT 80.3MPa</em></div>
         <div class="timer-block"><div class="timer-label">残り時間 <span class="module-plain-code">HULL FAILURE ESTIMATE</span></div><div class="timer" id="timer">12:00.0</div><div class="timer-bar"><i id="timerBar"></i></div><div class="mission-phase" id="missionPhase">封鎖待機</div></div>
-        <div class="top-actions"><a class="analyst-jump" href="analyst.html" target="_blank">MANUAL ↗</a><div class="comm-pill"><i></i>通話回線 / 接続中</div><button class="icon-btn" id="helpBtn" title="遊び方">?</button><button class="icon-btn" id="audioBtn" title="音声のオン・オフ">♪</button><button class="icon-btn" id="optionsBtn" title="音響・表示設定">⚙</button><button class="icon-btn" id="fullscreenBtn" title="全画面表示">⛶</button><button class="icon-btn" id="pauseBtn" title="一時停止">Ⅱ</button><button class="icon-btn" id="abortBtn" title="中断">×</button></div>
+        <div class="top-actions"><a class="analyst-jump" href="analyst.html" target="_blank">MANUAL VIEW ↗</a><div class="comm-pill"><i></i>通話回線 / 接続中</div><button class="icon-btn" id="helpBtn" title="遊び方">?</button><button class="icon-btn" id="audioBtn" title="音声のオン・オフ">♪</button><button class="icon-btn" id="optionsBtn" title="音響・表示設定">⚙</button><button class="icon-btn" id="fullscreenBtn" title="全画面表示">⛶</button><button class="icon-btn" id="pauseBtn" title="一時停止">Ⅱ</button><button class="icon-btn" id="abortBtn" title="中断">×</button></div>
       </header>
       <div class="console-wrap">
         <main class="console">
