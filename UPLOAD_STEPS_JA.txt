@@ -1,8 +1,21 @@
-1. GitHubの abyss-protocol リポジトリを開く
-2. Add file → Upload files
-3. このフォルダ内のファイルをすべて上書きアップロード
-4. Commit directly to the main branch
-5. Settings → Pages
-6. Source: Deploy from a branch
-7. Branch: main / Folder: /(root) → Save
-8. 数分後に公開URLへ ?v=22 を付けて確認
+ABYSS PROTOCOL REV.23 更新手順
+
+1. このフォルダの中身をすべて選択します。
+2. GitHubの NOTO-ReBloom / abyss-protocol を開きます。
+3. Code → Add file → Upload files を選びます。
+4. 選択したファイルをアップロード枠へ入れます。
+5. Commit message に「Update ABYSS PROTOCOL to REV23」と入力します。
+6. Commit directly to the main branch を選びます。
+7. Commit changes を押します。
+8. 数分後、公開URLを「?v=23」付きで開きます。
+
+例：
+https://noto-rebloom.github.io/abyss-protocol/?v=23
+
+主要画面：
+- トップ・導入映像：index.html
+- 操作者：game.html
+- 解析員：analyst.html
+- PDF：ABYSS_PROTOCOL_MANUAL.pdf
+
+今回のHTMLはCSS・JavaScript・主要背景画像を内部に保持しているため、assetsフォルダを別途配置する必要はありません。
